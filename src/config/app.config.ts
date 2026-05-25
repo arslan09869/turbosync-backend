@@ -13,7 +13,8 @@ const appConfig = () => ({
   GOOGLE_CLIENT_SECRET: getEnv("GOOGLE_CLIENT_SECRET"),
   GOOGLE_CALLBACK_URL: getEnv("GOOGLE_CALLBACK_URL"),
 
-  FRONTEND_ORIGIN: getEnv("FRONTEND_ORIGIN", "localhost"),
+  // Use a full origin (including protocol and port) as the default
+  FRONTEND_ORIGIN: getEnv("FRONTEND_ORIGIN", "https://turbo-sync-lyart.vercel.app"),
   FRONTEND_GOOGLE_CALLBACK_URL: getEnv("FRONTEND_GOOGLE_CALLBACK_URL"),
 });
 
