@@ -23,6 +23,10 @@ import taskRoutes from "./routes/task.route";
 const app = express();
 const BASE_PATH = config.BASE_PATH;
 
+// When running behind a proxy (Render, Heroku, nginx, etc.), enable trust proxy
+// so that secure cookies and other proxy-related features work correctly.
+app.set("trust proxy", 1);
+
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
